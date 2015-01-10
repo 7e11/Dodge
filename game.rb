@@ -12,7 +12,6 @@ SCREEN_HEIGHT = 720
 DELTA_TIME = (1.0/60.0) #Gotta have that 60fps goodness!
 
 class Game < Gosu::Window
-  #TODO: add a you win and a you loose screen
   def initialize
     #Create the window.
     super(SCREEN_WIDTH, SCREEN_HEIGHT, false)
@@ -57,6 +56,7 @@ class Game < Gosu::Window
 
     #set endgame logic
     @win = nil
+    @endChecked = false
   end
 
   def draw_border(x_from, y_from, x_to, y_to, collision)
@@ -74,7 +74,7 @@ class Game < Gosu::Window
   def update
     @win = false if @player.life == 0
     @win = true if (Gosu::milliseconds / 1000) == 60
-    endGameCheck
+    endGameCheck if @endChecked == false
     if (Gosu::milliseconds / 1000 == 5) && !(@soundtrack.playing?)
       @soundtrack.play
     end
@@ -111,7 +111,6 @@ class Game < Gosu::Window
         @player.life -= 1
         @player.invulnTimer = 120
         @scream.play
-        #exit if @player.life == 0 #TODO: add a you loose screen here.
       end
     end
   end
@@ -166,6 +165,12 @@ class Game < Gosu::Window
       @player.invulnTimer = 9999
       @space.remove_shape(@player.shape)
       @space.remove_body(@player.shape.body)
+      @endChecked = true
     end
+    #if @win == true
+    #  Gosu::Song.new(self, 'media/Applause.ogg').play
+    #elsif @win == false
+    #  Gosu::Song.new(self, 'media/NO.ogg').play
+    #end
   end
 end

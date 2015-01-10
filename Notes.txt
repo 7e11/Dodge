@@ -21,17 +21,13 @@ A point is placement.
 1280 /2 = 640
 
 0,0 is the TOP RIGHT CORNER.
-            |
-            |
-            |
-------------|------------
-            |
-            |   window is
-            |   here
-			
-			The reference account is currently locked out and is unable to be logged into.
+minus --------------------+
+|
+|
+|
+|
+|
+|
++
 
 		Song ends at 54.895 sec.
-
-Brainstorm Good Item Ideas:
-Slow Time.
