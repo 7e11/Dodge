@@ -1,0 +1,37 @@
+degree	Radian	Radians(approx)
+30°		π/6		0.524
+45°		π/4		0.785
+60°		π/3		1.047
+90°		π/2		1.571
+180°	π		3.142
+270°	3π/2	4.712
+360°	2π		6.283
+
+15 m/s run speed, 
+9.81 m/s gravity,  
+2m jump height.
+
+change resolution to 1280 x 720
+
+A Vector is displacement.
+A point is placement.
+
+10 pixles is one meter.
+720 / 2 = 360
+1280 /2 = 640
+
+0,0 is the TOP RIGHT CORNER.
+            |
+            |
+            |
+------------|------------
+            |
+            |   window is
+            |   here
+			
+			The reference account is currently locked out and is unable to be logged into.
+
+		Song ends at 54.895 sec.
+
+Brainstorm Good Item Ideas:
+Slow Time.
