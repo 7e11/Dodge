@@ -126,7 +126,7 @@ class Game < Gosu::Window
     @currentItem.draw if @space.itemExists
     @currentItem.drawText
     @superImage.draw(0,0,9) if @win == true || @win == false
-    @scoreFont.draw('YOU WIN', (SCREEN_WIDTH / 2) - 300, (SCREEN_HEIGHT / 2) - 50, 10, 1, 1, Gosu::Color::GREEN) if @win == true
+    @scoreFont.draw('YOU WIN', (SCREEN_WIDTH / 2) - 200, (SCREEN_HEIGHT / 2) - 50, 10, 1, 1, Gosu::Color::GREEN) if @win == true
     @scoreFont.draw('YOU LOSE', (SCREEN_WIDTH / 2) - 200, (SCREEN_HEIGHT / 2 - 50), 10, 1, 1, Gosu::Color::RED) if @win == false
   end
 
